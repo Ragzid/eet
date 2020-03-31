@@ -221,15 +221,7 @@ use Fritak\eet\ExceptionEet;
     {
         if(empty($this->uuid_zpravy))
         {
-            try 
-            {
-                $uuid = Uuid::getUuid4();
-            } 
-            catch (UnsatisfiedDependencyException $e) 
-            {
-                throw new ExceptionEet('Requirements not met: ' . $e->getMessage(), 103);
-            }
-
+            $uuid = Uuid::getUuid4();
         }
         else
         {
