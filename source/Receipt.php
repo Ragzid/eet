@@ -2,9 +2,8 @@
 
 namespace Fritak\eet;
 
-use Ramsey\Uuid\Exception\UnsatisfiedDependencyException;
 use Fritak\eet\ExceptionEet;
-use Ramsey\Uuid\Uuid;
+use Fritak\eet\Uuid;
 
 /**
  * Receipt for EET according to v3 version.
@@ -47,7 +46,10 @@ class Receipt
 
     /**
      * Appointing taxpayer tax identification number
-     * 
+     * namespace Fritak\eet;
+
+use Fritak\eet\ExceptionEet;
+
      * @var string 
      */
     public $dic_poverujiciho;
@@ -221,8 +223,7 @@ class Receipt
         {
             try 
             {
-                $generator = Uuid::uuid4();
-                $uuid      = $generator->toString();
+                $uuid = Uuid::getUuid4();
             } 
             catch (UnsatisfiedDependencyException $e) 
             {

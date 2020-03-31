@@ -4,10 +4,9 @@
     "type": "library",
     "license": ["MIT"],
     "require": {
-        "php": ">=5.6.0",
+        "php": ">=5.6.0 <7",
         "robrichards/wse-php": "*",
-        "robrichards/xmlseclibs": "*",
-        "ramsey/uuid": "^3"
+        "robrichards/xmlseclibs": "*"
     },
     "autoload": {
         "classmap": ["source/"]
